@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Contract_Employee_Payments.Data;
 using Contract_Employee_Payments.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Contract_Employee_Payments.Controllers
 {
@@ -43,6 +44,7 @@ namespace Contract_Employee_Payments.Controllers
             return View(project);
         }
 
+        [Authorize]
         // GET: Projects/Create
         public IActionResult Create()
         {
@@ -65,6 +67,7 @@ namespace Contract_Employee_Payments.Controllers
             return View(project);
         }
 
+        [Authorize]
         // GET: Projects/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -116,6 +119,7 @@ namespace Contract_Employee_Payments.Controllers
             return View(project);
         }
 
+        [Authorize]
         // GET: Projects/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

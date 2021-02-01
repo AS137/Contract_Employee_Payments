@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Contract_Employee_Payments.Data;
 using Contract_Employee_Payments.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Contract_Employee_Payments.Controllers
 {
+    [Authorize]
     public class ContractEmployeesController : Controller
     {
         private readonly Contract_Employee_PaymentsContext _context;
